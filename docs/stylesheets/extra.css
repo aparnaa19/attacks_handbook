@@ -1,0 +1,4 @@
+/* Hide empty header rows on the key-value tables at the top of each attack page */
+.md-typeset table:not([class]) thead:not(:has(th:not(:empty))) {
+  display: none;
+}
