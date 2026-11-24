@@ -79,5 +79,5 @@ index=sysmon EventCode=11 Image="*\\w3wp.exe"
 
 ---
 
-| [← IDOR](idor.md) | [Home](../README.md) | [Network attacks →](../network-attacks/README.md) |
+| [← Open redirect](open-redirect.md) | [Home](../README.md) | [Network attacks →](../network-attacks/README.md) |
 |:---|:---:|---:|

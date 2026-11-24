@@ -66,5 +66,5 @@ index=webapp action=login result=failure
 
 ---
 
-| [← Password spraying](password-spraying.md) | [Home](../README.md) | [MFA fatigue →](mfa-fatigue.md) |
+| [← Password spraying](password-spraying.md) | [Home](../README.md) | [MFA fatigue (push bombing) →](mfa-fatigue.md) |
 |:---|:---:|---:|

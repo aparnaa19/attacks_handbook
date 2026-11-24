@@ -51,5 +51,5 @@ Users don't even need to type a wrong name: misconfigured apps, old drive mappin
 
 ---
 
-| [← MITM and ARP spoofing](mitm-arp-spoofing.md) | [Home](../README.md) | [DNS tunneling →](dns-tunneling.md) |
+| [← Evil twin and rogue Wi-Fi](evil-twin.md) | [Home](../README.md) | [DNS hijacking and DNS spoofing →](dns-hijacking.md) |
 |:---|:---:|---:|

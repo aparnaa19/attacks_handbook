@@ -12,6 +12,9 @@ Attacks that abuse **network protocols**: finding targets, overloading services,
 | [LLMNR / NBT-NS poisoning](llmnr-nbtns-poisoning.md) | Windows fallback name resolution trusts anyone who answers | T1557.001 |
 | [DNS tunneling](dns-tunneling.md) | Hiding data and commands inside DNS queries | T1071.004 |
 | [C2 beaconing](c2-beaconing.md) | Malware regularly "checking in" with the attacker | T1071, T1573 |
+| [Evil twin and rogue Wi-Fi](evil-twin.md) | Fake access point with your network's name | T1557 |
+| [DNS hijacking and spoofing](dns-hijacking.md) | Your domain resolves to the attacker's IP | T1584.002, T1557 |
+| [Reverse shells, tunneling and pivoting](reverse-shells-pivoting.md) | Compromised host connects out and relays the attacker inside | T1572, T1090.001 |
 
 ## Where each attack sits (OSI layers)
 
@@ -53,5 +56,5 @@ sequenceDiagram
 
 ---
 
-| [← File upload and web shells](../web-attacks/file-upload-web-shell.md) | [Home](../README.md) | [Reconnaissance and scanning →](reconnaissance-scanning.md) |
+| [← File upload attacks and web shells](../web-attacks/file-upload-web-shell.md) | [Home](../README.md) | [Reconnaissance and scanning →](reconnaissance-scanning.md) |
 |:---|:---:|---:|

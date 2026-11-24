@@ -1,4 +1,4 @@
-<sub>[Home](../README.md) › Basics</sub>
+<sub>[Home](../README.md)</sub>
 
 # Key SOC terms
 

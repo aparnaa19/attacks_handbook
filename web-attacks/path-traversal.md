@@ -78,5 +78,5 @@ index=web
 
 ---
 
-| [← Command injection](command-injection.md) | [Home](../README.md) | [SSRF →](ssrf.md) |
+| [← Command injection](command-injection.md) | [Home](../README.md) | [Server-side request forgery (SSRF) →](ssrf.md) |
 |:---|:---:|---:|

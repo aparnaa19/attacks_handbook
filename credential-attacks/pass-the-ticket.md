@@ -53,5 +53,5 @@
 
 ---
 
-| [← Pass-the-hash](pass-the-hash.md) | [Home](../README.md) | [Kerberoasting →](kerberoasting.md) |
+| [← Pass-the-hash](pass-the-hash.md) | [Home](../README.md) | [NTLM relay →](ntlm-relay.md) |
 |:---|:---:|---:|

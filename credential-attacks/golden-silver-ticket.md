@@ -62,5 +62,5 @@
 
 ---
 
-| [← AS-REP roasting](as-rep-roasting.md) | [Home](../README.md) | [Malware →](../malware/README.md) |
+| [← AS-REP roasting](as-rep-roasting.md) | [Home](../README.md) | [AD CS certificate abuse →](ad-cs-abuse.md) |
 |:---|:---:|---:|

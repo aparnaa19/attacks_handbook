@@ -64,5 +64,5 @@ index=o365 Operation IN ("New-InboxRule", "Set-InboxRule", "Set-Mailbox")
 
 ---
 
-| [← Phishing](phishing.md) | [Home](../README.md) | [Social engineering →](social-engineering.md) |
+| [← HTML smuggling](html-smuggling.md) | [Home](../README.md) | [Lookalike domains (typosquatting) →](lookalike-domains.md) |
 |:---|:---:|---:|

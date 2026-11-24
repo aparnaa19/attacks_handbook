@@ -65,5 +65,5 @@ Insider cases are handled differently from external attacks:
 
 ---
 
-| [← Cloud misconfiguration](../cloud-identity/cloud-misconfiguration.md) | [Home](../README.md) |  |
+| [← Deepfake fraud](../ai-attacks/deepfake-fraud.md) | [Home](../README.md) |  |
 |:---|:---:|---:|

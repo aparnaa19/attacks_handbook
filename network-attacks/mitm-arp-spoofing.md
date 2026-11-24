@@ -60,5 +60,5 @@ On a local network, devices send frames to **MAC addresses**, not IPs. **ARP** (
 
 ---
 
-| [← DoS and DDoS](dos-ddos.md) | [Home](../README.md) | [LLMNR / NBT-NS poisoning →](llmnr-nbtns-poisoning.md) |
+| [← DoS and DDoS](dos-ddos.md) | [Home](../README.md) | [Evil twin and rogue Wi-Fi →](evil-twin.md) |
 |:---|:---:|---:|

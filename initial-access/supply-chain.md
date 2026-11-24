@@ -56,5 +56,5 @@ Signature-based tools trust the software, so detection relies on **behaviour**:
 
 ---
 
-| [← Exploiting public-facing apps](exploit-public-facing-app.md) | [Home](../README.md) | [Credential attacks →](../credential-attacks/README.md) |
+| [← Exploiting public-facing applications](exploit-public-facing-app.md) | [Home](../README.md) | [Credential attacks →](../credential-attacks/README.md) |
 |:---|:---:|---:|

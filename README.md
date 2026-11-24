@@ -4,8 +4,8 @@
 
 **The attacks a SOC analyst needs to know: how they work, what they look like in logs, how to detect them and how to respond.**
 
-![Attacks](https://img.shields.io/badge/attacks-47-2b3137?style=flat-square)
-![Categories](https://img.shields.io/badge/categories-8-2b3137?style=flat-square)
+![Attacks](https://img.shields.io/badge/attacks-66-2b3137?style=flat-square)
+![Categories](https://img.shields.io/badge/categories-9-2b3137?style=flat-square)
 ![MITRE ATT&CK](https://img.shields.io/badge/mapped_to-MITRE_ATT%26CK-c0392b?style=flat-square)
 ![Splunk](https://img.shields.io/badge/detections-Splunk_SPL-65a637?style=flat-square)
 
@@ -54,8 +54,12 @@ flowchart LR
 | Attack | ATT&CK / ID | In one line |
 |---|---|---|
 | [Phishing](initial-access/phishing.md) | T1566 | A fake message tricks the user into clicking a link, opening an attachment or entering their password. |
+| [QR code phishing (quishing)](initial-access/qr-code-phishing.md) | T1566.002 | The phishing link is hidden inside a QR code image, so email filters can't read it, and the victim scans it with their phone, which has no corporate protection. |
+| [HTML smuggling](initial-access/html-smuggling.md) | T1027.006 | An innocent-looking `.html` attachment builds the malware file inside the browser using JavaScript, so the email gateway and web proxy never see the malicious file pass through. |
 | [Business email compromise (BEC)](initial-access/business-email-compromise.md) | T1534, T1114.003 | The attacker pretends to be (or takes over) a trusted email account, an executive, a vendor or a lawyer, and asks someone to send money or sensitive data. |
+| [Lookalike domains (typosquatting)](initial-access/lookalike-domains.md) | T1583.001 | The attacker registers a domain that looks almost exactly like yours or a partner's (`rnicrosoft.com`, `acme-corp.co`) and uses it for phishing, BEC or fake websites. |
 | [Social engineering](initial-access/social-engineering.md) | T1566.004, T1219 | Manipulating people instead of computers: phone calls, SMS, fake IT support and help desk tricks to get passwords, MFA codes or remote access. |
+| [SIM swapping](initial-access/sim-swapping.md) | T1451 | The attacker convinces (or bribes) a mobile carrier to move the victim's phone number to the attacker's SIM card, then receives the victim's SMS codes and calls, including MFA and password resets. |
 | [Drive-by compromise](initial-access/drive-by-compromise.md) | T1189 | The user visits a website (hacked, fake or malicious ad) and gets infected, either by an exploit or by being tricked into downloading a "fake update" or "fake installer". |
 | [Exploiting public-facing applications](initial-access/exploit-public-facing-app.md) | T1190 | The attacker hacks an internet-facing system (web app, VPN, firewall, mail server, file transfer server) using a vulnerability, and gets code running on it. |
 | [Supply chain attack](initial-access/supply-chain.md) | T1195, T1199 | The attacker compromises software, an update or a provider you already trust, so the malware arrives through a trusted channel. |
@@ -72,9 +76,11 @@ flowchart LR
 | [DCSync](credential-attacks/dcsync.md) | T1003.006 | The attacker pretends to be a domain controller and asks a real DC to send over everyone's password hashes using normal AD replication. |
 | [Pass-the-hash](credential-attacks/pass-the-hash.md) | T1550.002 | The attacker logs in with a stolen NTLM password hash instead of the password. No cracking needed. |
 | [Pass-the-ticket](credential-attacks/pass-the-ticket.md) | T1550.003 | The attacker steals a Kerberos ticket from memory on one machine and loads it into their own session to act as that user. |
+| [NTLM relay](credential-attacks/ntlm-relay.md) | T1557.001 | The attacker tricks a machine into authenticating to them, then forwards that authentication in real time to another server and logs in there as the victim. No password or hash cracking needed. |
 | [Kerberoasting](credential-attacks/kerberoasting.md) | T1558.003 | Any domain user requests service tickets for service accounts, takes them offline, and cracks the service account's password from the ticket. |
 | [AS-REP roasting](credential-attacks/as-rep-roasting.md) | T1558.004 | For accounts with Kerberos pre-authentication disabled, anyone can ask the DC for a TGT response and crack the user's password from it offline. |
 | [Golden and silver ticket](credential-attacks/golden-silver-ticket.md) | T1558.001, T1558.002 | With a stolen Kerberos key, the attacker forges their own tickets: a golden ticket (forged TGT) gives access to the whole domain; a silver ticket (forged service ticket) gives access to one service. |
+| [AD CS certificate abuse](credential-attacks/ad-cs-abuse.md) | T1649 | The attacker abuses a misconfigured Active Directory Certificate Services template to get a certificate in a Domain Admin's name, then uses it to log in as that admin. |
 
 ### [Malware](malware/README.md)
 
@@ -84,9 +90,12 @@ flowchart LR
 | [Trojans and RATs](malware/trojans-and-rats.md) | T1204.002, T1071 | A trojan pretends to be legitimate software. A RAT (Remote Access Trojan) is a trojan that gives the attacker full remote control of the machine. |
 | [Worms](malware/worms.md) | T1210, T1091 | Malware that spreads from machine to machine by itself, without anyone clicking anything, by exploiting a vulnerability or using stolen credentials. |
 | [Infostealers](malware/infostealers.md) | T1555.003, T1539 | Malware that quickly steals saved passwords, browser cookies, crypto wallets and files, sends them to the attacker, and often deletes itself. |
+| [Rootkits and bootkits](malware/rootkits.md) | T1014, T1542.003 | Malware that hides itself (and other malware) from the operating system, by running in the kernel or before Windows even starts, so normal tools can't see it. |
+| [Cryptojacking](malware/cryptojacking.md) | T1496 | The attacker uses your CPUs, GPUs or cloud account to mine cryptocurrency for themselves. You pay the electricity or cloud bill. |
 | [Fileless malware](malware/fileless-malware.md) | T1059.001, T1620 | Malicious code that runs in memory and uses built-in Windows tools, leaving little or no malicious file on disk for antivirus to scan. |
 | [PowerShell abuse](malware/powershell-abuse.md) | T1059.001 | Attackers use PowerShell, Windows' built-in scripting language, to download, decode and run malicious code while blending in with admin activity. |
 | [LOLBins (Living off the Land)](malware/lolbins.md) | T1218, T1105 | Attackers use legitimate, Microsoft-signed programs already on Windows to download files, run code and bypass security, so nothing "foreign" is installed. |
+| [Process injection and DLL side-loading](malware/process-injection.md) | T1055, T1574 | Malware runs its code inside a trusted process (injection) or gets a trusted, signed program to load a malicious DLL (side-loading), so the activity looks like it comes from legitimate software. |
 
 ### [Web attacks](web-attacks/README.md)
 
@@ -97,8 +106,11 @@ flowchart LR
 | [Command injection](web-attacks/command-injection.md) | T1190, T1059 | The application passes user input to an operating system shell, and the attacker adds their own commands, getting code execution on the server. |
 | [Path traversal and file inclusion (LFI / RFI)](web-attacks/path-traversal.md) | T1190 | The attacker uses `../` in a file name parameter to read files outside the web folder (path traversal), or makes the application load and run a local or remote file (file inclusion). |
 | [Server-side request forgery (SSRF)](web-attacks/ssrf.md) | T1190, T1552.005 | The attacker makes the server send a request to a URL they choose, usually an internal system the attacker can't reach directly, like the cloud metadata service. |
+| [XML external entity (XXE)](web-attacks/xxe.md) | CWE-611 | The attacker sends XML that tells the server's XML parser to load an "external entity" (a local file or a URL), so the server reads its own files or makes requests for the attacker. |
+| [Insecure deserialization](web-attacks/insecure-deserialization.md) | CWE-502 | The application turns attacker-supplied data back into program objects, and a crafted object makes the server run the attacker's code while it's being rebuilt. |
 | [Cross-site request forgery (CSRF)](web-attacks/csrf.md) | CWE-352 | A malicious website makes the victim's browser send a request to another site where the victim is logged in, so the action runs with the victim's session (change email, transfer money). |
 | [Insecure direct object reference (IDOR)](web-attacks/idor.md) | CWE-639 | The attacker changes an ID in a request (`invoice=1001` → `1002`) and gets someone else's data, because the server never checks that the object belongs to them. |
+| [Open redirect](web-attacks/open-redirect.md) | CWE-601 | A trusted website has a redirect feature that sends users to any URL in a parameter, so attackers use the trusted domain's link to bounce victims to a phishing site. |
 | [File upload attacks and web shells](web-attacks/file-upload-web-shell.md) | T1505.003 | The attacker uploads a script (`.php`, `.aspx`, `.jsp`) to the web server and then opens it in the browser, giving them a web shell: a web page that runs any command on the server. |
 
 ### [Network attacks](network-attacks/README.md)
@@ -108,9 +120,12 @@ flowchart LR
 | [Reconnaissance and scanning](network-attacks/reconnaissance-scanning.md) | T1595, T1046 | Before attacking, the attacker collects information: which hosts are alive, which ports are open, which software and versions are running, who works there. |
 | [DoS and DDoS](network-attacks/dos-ddos.md) | T1498, T1499 | The attacker overloads a service (bandwidth, server resources or the application) so real users can't use it. DDoS = from many machines at once (a botnet). |
 | [Man-in-the-middle (MITM) and ARP spoofing](network-attacks/mitm-arp-spoofing.md) | T1557.002 | The attacker places themselves between the victim and the network so all traffic passes through them, letting them read or change it. |
+| [Evil twin and rogue Wi-Fi](network-attacks/evil-twin.md) | T1557, T1465 | The attacker sets up a fake Wi-Fi access point with the same name as a real one, gets devices to connect to it, and then sees or tampers with their traffic or captures their Wi-Fi credentials. |
 | [LLMNR / NBT-NS poisoning](network-attacks/llmnr-nbtns-poisoning.md) | T1557.001 | When a Windows machine can't resolve a name through DNS, it asks the whole local network. The attacker answers "that's me", and the victim sends them its NTLM password hash. |
+| [DNS hijacking and DNS spoofing](network-attacks/dns-hijacking.md) | T1584.002, T1584.001 | The attacker makes a domain name resolve to the attacker's IP, so users who type the correct address still land on the attacker's server. |
 | [DNS tunneling](network-attacks/dns-tunneling.md) | T1071.004, T1048 | The attacker hides commands and stolen data inside DNS queries and answers, because almost every network allows DNS out. |
 | [C2 beaconing](network-attacks/c2-beaconing.md) | T1071, T1573 | Malware on an infected machine regularly contacts the attacker's command-and-control (C2) server to ask "any new commands?". These regular check-ins are called beacons. |
+| [Reverse shells, tunneling and pivoting](network-attacks/reverse-shells-pivoting.md) | T1059, T1572 | The attacker makes a compromised machine connect out to give them a shell, then uses it as a relay (pivot) to reach internal systems they couldn't reach directly. |
 
 ### [Post-exploitation](post-exploitation/README.md)
 
@@ -121,6 +136,7 @@ flowchart LR
 | [Lateral movement](post-exploitation/lateral-movement.md) | TA0008 | The attacker moves from the first compromised machine to other machines, using stolen credentials and normal admin tools, until they reach what they want (domain controller, file servers, backups). |
 | [Defense evasion](post-exploitation/defense-evasion.md) | TA0005 | The attacker avoids being detected: disables security tools, clears logs, disguises malware as legitimate files and hides activity in trusted processes. |
 | [Data exfiltration](post-exploitation/data-exfiltration.md) | TA0010 | The attacker copies data out of the organisation to a place they control, usually to sell it or to threaten to publish it (ransomware double extortion). |
+| [Container escape](post-exploitation/container-escape.md) | T1611, T1610 | The attacker breaks out of a Docker / Kubernetes container onto the host machine, gaining access to every other container and often the whole cluster. |
 
 ### [Cloud and identity](cloud-identity/README.md)
 
@@ -128,7 +144,15 @@ flowchart LR
 |---|---|---|
 | [Session token theft (AiTM phishing)](cloud-identity/session-token-theft.md) | T1557, T1539 | A phishing site sits between the user and the real login page, lets the user log in normally including MFA, and steals the session cookie that comes back. The attacker uses that cookie to be logged in as the user, with no password or MFA needed. |
 | [OAuth consent phishing](cloud-identity/oauth-consent-phishing.md) | T1528, T1550.001 | The attacker tricks a user into clicking "Accept" on a real Microsoft/Google permissions screen, giving the attacker's app access to the user's mail and files. The access keeps working even after a password reset or MFA. |
+| [Golden SAML](cloud-identity/golden-saml.md) | T1606.002, T1552.004 | The attacker steals the token-signing key of the company's identity provider (e.g. AD FS) and forges SAML logins as any user to any connected cloud app, bypassing passwords and MFA. |
 | [Cloud misconfiguration and key abuse](cloud-identity/cloud-misconfiguration.md) | T1530, T1552.001 | Many cloud breaches need no exploit: data is left public, access keys are leaked, or permissions are far too wide. Attackers scan for these constantly. |
+
+### [AI-enabled attacks](ai-attacks/README.md)
+
+| Attack | ATT&CK / ID | In one line |
+|---|---|---|
+| [Prompt injection](ai-attacks/prompt-injection.md) | AML.T0051 | The attacker writes instructions into text an AI model reads, and the model follows them instead of the developer's rules: leaking data, ignoring restrictions, or making its tools do something harmful. |
+| [Deepfake fraud](ai-attacks/deepfake-fraud.md) | T1656, T1566.004 | The attacker uses AI-generated voice or video of a real executive or colleague to convince an employee to send money, share credentials or grant access. |
 
 ### [Insider threat](insider-threat/README.md)
 

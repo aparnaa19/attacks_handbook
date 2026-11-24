@@ -55,5 +55,5 @@ The attacker never sees the cookie or the response. They only trigger the action
 
 ---
 
-| [← SSRF](ssrf.md) | [Home](../README.md) | [IDOR →](idor.md) |
+| [← Insecure deserialization](insecure-deserialization.md) | [Home](../README.md) | [Insecure direct object reference (IDOR) →](idor.md) |
 |:---|:---:|---:|

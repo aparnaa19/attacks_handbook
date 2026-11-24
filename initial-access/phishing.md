@@ -90,5 +90,5 @@ index=sysmon EventCode=1
 
 ---
 
-| [← Initial access](README.md) | [Home](../README.md) | [Business email compromise →](business-email-compromise.md) |
+| [← Initial access](README.md) | [Home](../README.md) | [QR code phishing (quishing) →](qr-code-phishing.md) |
 |:---|:---:|---:|

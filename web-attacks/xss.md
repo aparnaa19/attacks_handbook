@@ -65,5 +65,5 @@ Encoded versions: `%3Cscript%3E`, `&lt;script&gt;`, `<script>`. `alert(1)` is us
 
 ---
 
-| [← SQL injection](sql-injection.md) | [Home](../README.md) | [Command injection →](command-injection.md) |
+| [← SQL injection (SQLi)](sql-injection.md) | [Home](../README.md) | [Command injection →](command-injection.md) |
 |:---|:---:|---:|

@@ -66,5 +66,5 @@ index=api uri_path="/api/invoices/*"
 
 ---
 
-| [← CSRF](csrf.md) | [Home](../README.md) | [File upload and web shells →](file-upload-web-shell.md) |
+| [← Cross-site request forgery (CSRF)](csrf.md) | [Home](../README.md) | [Open redirect →](open-redirect.md) |
 |:---|:---:|---:|

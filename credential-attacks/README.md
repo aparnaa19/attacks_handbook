@@ -26,6 +26,8 @@ Attacks that **guess, steal or reuse** passwords, password hashes and Kerberos t
 | [Kerberoasting](kerberoasting.md) | Service ticket cracked offline to get a service account password | T1558.003 |
 | [AS-REP roasting](as-rep-roasting.md) | Accounts without Kerberos pre-auth cracked offline | T1558.004 |
 | [Golden / silver ticket](golden-silver-ticket.md) | Forged Kerberos tickets | T1558.001 / .002 |
+| [NTLM relay](ntlm-relay.md) | NTLM authentication forwarded live to another server | T1557.001, T1187 |
+| [AD CS certificate abuse](ad-cs-abuse.md) | Certificate issued in an admin's name from a vulnerable template | T1649 |
 
 ## Kerberos in 5 steps (needed for the Kerberos attacks)
 

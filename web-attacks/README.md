@@ -14,6 +14,9 @@ Attacks against **web applications and APIs**. The attacker sends specially craf
 | [CSRF](csrf.md) | Server trusts any request that carries the user's cookie | | CWE-352 |
 | [IDOR](idor.md) | Server doesn't check if the object belongs to the user | A01 Broken Access Control | CWE-639 |
 | [File upload and web shells](file-upload-web-shell.md) | Server accepts and runs uploaded code | | CWE-434 |
+| [XXE](xxe.md) | XML parser loads files or URLs named in the input | A02 Security Misconfiguration | CWE-611 |
+| [Insecure deserialization](insecure-deserialization.md) | Server rebuilds attacker-supplied objects and runs code | A08 Software or Data Integrity Failures | CWE-502 |
+| [Open redirect](open-redirect.md) | Trusted site redirects to any URL in a parameter | | CWE-601 |
 
 ## OWASP Top 10:2025
 
@@ -73,5 +76,5 @@ Tool: **CyberChef** → `URL Decode`.
 
 ---
 
-| [← LOLBins](../malware/lolbins.md) | [Home](../README.md) | [SQL injection →](sql-injection.md) |
+| [← Process injection and DLL side-loading](../malware/process-injection.md) | [Home](../README.md) | [SQL injection (SQLi) →](sql-injection.md) |
 |:---|:---:|---:|

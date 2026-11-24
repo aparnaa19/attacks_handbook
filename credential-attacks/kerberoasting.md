@@ -63,5 +63,5 @@ index=wineventlog EventCode=4769 Ticket_Encryption_Type=0x17
 
 ---
 
-| [← Pass-the-ticket](pass-the-ticket.md) | [Home](../README.md) | [AS-REP roasting →](as-rep-roasting.md) |
+| [← NTLM relay](ntlm-relay.md) | [Home](../README.md) | [AS-REP roasting →](as-rep-roasting.md) |
 |:---|:---:|---:|

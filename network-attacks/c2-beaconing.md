@@ -72,5 +72,5 @@ Low standard deviation relative to the average interval = regular = beacon-like.
 
 ---
 
-| [← DNS tunneling](dns-tunneling.md) | [Home](../README.md) | [Post-exploitation →](../post-exploitation/README.md) |
+| [← DNS tunneling](dns-tunneling.md) | [Home](../README.md) | [Reverse shells, tunneling and pivoting →](reverse-shells-pivoting.md) |
 |:---|:---:|---:|

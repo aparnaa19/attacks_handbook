@@ -12,6 +12,10 @@ How attackers get their **first foothold** in the organisation. Stop it here and
 | [Drive-by compromise](drive-by-compromise.md) | Visiting a malicious or hacked website, fake downloads | T1189 |
 | [Exploiting public-facing apps](exploit-public-facing-app.md) | Hacking an internet-facing server, VPN or firewall | T1190 |
 | [Supply chain attack](supply-chain.md) | Malicious code inside software or updates you trust | T1195 |
+| [QR code phishing](qr-code-phishing.md) | Phishing link hidden in a QR code, scanned on a phone | T1566.002 |
+| [HTML smuggling](html-smuggling.md) | HTML attachment builds the malware inside the browser | T1027.006 |
+| [Lookalike domains](lookalike-domains.md) | Domains that look like yours or a partner's | T1583.001 |
+| [SIM swapping](sim-swapping.md) | Victim's phone number moved to the attacker's SIM to steal SMS codes | T1451 (Mobile) |
 
 Other ways in, covered elsewhere:
 

@@ -52,5 +52,5 @@
 
 ---
 
-| [← Session token theft (AiTM)](session-token-theft.md) | [Home](../README.md) | [Cloud misconfiguration →](cloud-misconfiguration.md) |
+| [← Session token theft (AiTM phishing)](session-token-theft.md) | [Home](../README.md) | [Golden SAML →](golden-saml.md) |
 |:---|:---:|---:|

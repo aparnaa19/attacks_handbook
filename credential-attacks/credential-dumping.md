@@ -71,5 +71,5 @@ index=sysmon EventCode=10 TargetImage="*\\lsass.exe"
 
 ---
 
-| [← MFA fatigue](mfa-fatigue.md) | [Home](../README.md) | [DCSync →](dcsync.md) |
+| [← MFA fatigue (push bombing)](mfa-fatigue.md) | [Home](../README.md) | [DCSync →](dcsync.md) |
 |:---|:---:|---:|

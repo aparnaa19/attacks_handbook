@@ -9,6 +9,7 @@ In cloud and SaaS environments (Microsoft 365, Google Workspace, AWS, Azure), **
 | [Session token theft (AiTM)](session-token-theft.md) | Logged-in session cookies, which skip MFA | T1557, T1539, T1550.004 |
 | [OAuth consent phishing](oauth-consent-phishing.md) | User grants a malicious app access to their mail/files | T1528 |
 | [Cloud misconfiguration](cloud-misconfiguration.md) | Public storage, leaked access keys, over-permissive roles | T1530, T1552.001, T1078.004 |
+| [Golden SAML](golden-saml.md) | Identity provider's signing key used to forge logins | T1606.002 |
 
 Related pages: [MFA fatigue](../credential-attacks/mfa-fatigue.md), [Password spraying](../credential-attacks/password-spraying.md), [BEC](../initial-access/business-email-compromise.md), [SSRF to cloud metadata](../web-attacks/ssrf.md), [Infostealers](../malware/infostealers.md) (cookie theft).
 
@@ -39,5 +40,5 @@ Related pages: [MFA fatigue](../credential-attacks/mfa-fatigue.md), [Password sp
 
 ---
 
-| [← Data exfiltration](../post-exploitation/data-exfiltration.md) | [Home](../README.md) | [Session token theft (AiTM) →](session-token-theft.md) |
+| [← Container escape](../post-exploitation/container-escape.md) | [Home](../README.md) | [Session token theft (AiTM phishing) →](session-token-theft.md) |
 |:---|:---:|---:|

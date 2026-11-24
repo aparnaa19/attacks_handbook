@@ -64,5 +64,5 @@ https://app.com/fetch?url=http://169.254.169.254/latest/meta-data/iam/security-c
 
 ---
 
-| [← Path traversal and LFI](path-traversal.md) | [Home](../README.md) | [CSRF →](csrf.md) |
+| [← Path traversal and file inclusion (LFI / RFI)](path-traversal.md) | [Home](../README.md) | [XML external entity (XXE) →](xxe.md) |
 |:---|:---:|---:|

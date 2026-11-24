@@ -72,5 +72,5 @@ index=aws sourcetype=aws:cloudtrail
 
 ---
 
-| [← OAuth consent phishing](oauth-consent-phishing.md) | [Home](../README.md) | [Insider threat →](../insider-threat/README.md) |
+| [← Golden SAML](golden-saml.md) | [Home](../README.md) | [AI-enabled attacks →](../ai-attacks/README.md) |
 |:---|:---:|---:|

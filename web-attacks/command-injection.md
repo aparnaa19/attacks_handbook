@@ -78,5 +78,5 @@ index=edr parent_process_name IN ("httpd", "apache2", "nginx", "php-fpm", "java"
 
 ---
 
-| [← Cross-site scripting (XSS)](xss.md) | [Home](../README.md) | [Path traversal and LFI →](path-traversal.md) |
+| [← Cross-site scripting (XSS)](xss.md) | [Home](../README.md) | [Path traversal and file inclusion (LFI / RFI) →](path-traversal.md) |
 |:---|:---:|---:|

@@ -62,5 +62,5 @@
 
 ---
 
-| [← Reconnaissance and scanning](reconnaissance-scanning.md) | [Home](../README.md) | [MITM and ARP spoofing →](mitm-arp-spoofing.md) |
+| [← Reconnaissance and scanning](reconnaissance-scanning.md) | [Home](../README.md) | [Man-in-the-middle (MITM) and ARP spoofing →](mitm-arp-spoofing.md) |
 |:---|:---:|---:|

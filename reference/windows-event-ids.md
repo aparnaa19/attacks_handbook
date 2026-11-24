@@ -1,4 +1,4 @@
-<sub>[Home](../README.md) › Quick reference</sub>
+<sub>[Home](../README.md)</sub>
 
 # Windows event IDs
 

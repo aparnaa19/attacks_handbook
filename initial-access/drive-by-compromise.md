@@ -64,5 +64,5 @@ index=sysmon EventCode=1 Image IN ("*\\wscript.exe", "*\\cscript.exe")
 
 ---
 
-| [← Social engineering](social-engineering.md) | [Home](../README.md) | [Exploiting public-facing apps →](exploit-public-facing-app.md) |
+| [← SIM swapping](sim-swapping.md) | [Home](../README.md) | [Exploiting public-facing applications →](exploit-public-facing-app.md) |
 |:---|:---:|---:|

@@ -1,4 +1,4 @@
-<sub>[Home](../README.md) › Quick reference</sub>
+<sub>[Home](../README.md)</sub>
 
 # I see X, what is it?
 
@@ -21,6 +21,10 @@ Find what you see in the alert or log, then open the page for the likely attack.
 | New user created (4720) or added to admins (4728/4732) unexpectedly | [Persistence](../post-exploitation/persistence.md) / [Privilege escalation](../post-exploitation/privilege-escalation.md) |
 | Inbox rule forwarding mail to an external address | [Business email compromise](../initial-access/business-email-compromise.md) |
 | New OAuth app with mail / file permissions consented by a user | [OAuth consent phishing](../cloud-identity/oauth-consent-phishing.md) |
+| Machine account (`DC01$`) logging in with NTLM from an IP that isn't that machine | [NTLM relay](../credential-attacks/ntlm-relay.md) |
+| Certificate issued (4887) where requester ≠ subject; admin logging in with a certificate (4768 with certificate fields) | [AD CS abuse](../credential-attacks/ad-cs-abuse.md) |
+| SMS password reset, then MFA methods changed; user says their phone lost signal | [SIM swapping](../initial-access/sim-swapping.md) |
+| Federated cloud sign-in with no matching AD FS token issuance | [Golden SAML](../cloud-identity/golden-saml.md) |
 
 ## Processes
 
@@ -36,6 +40,12 @@ Find what you see in the alert or log, then open the page for the likely attack.
 | `wevtutil cl`, event 1102, Defender 5001 | [Defense evasion](../post-exploitation/defense-evasion.md) |
 | `rclone`, `MEGAsync`, `7z a -p` on a server | [Data exfiltration](../post-exploitation/data-exfiltration.md) |
 | Event 7045 service with random name or `\\ADMIN$` path | [Lateral movement](../post-exploitation/lateral-movement.md) (PsExec-style) |
+| Signed EXE in `AppData` / `ProgramData` loading an unsigned DLL; `notepad.exe` making network connections | [Process injection / DLL side-loading](../malware/process-injection.md) |
+| Unsigned or known-vulnerable driver loaded (Sysmon 6); `bcdedit /set testsigning on` | [Rootkits](../malware/rootkits.md) |
+| Constant 100% CPU; `xmrig`, `stratum+tcp://`, `--donate-level` | [Cryptojacking](../malware/cryptojacking.md) |
+| `bash -i >& /dev/tcp/`, `nc -e`, `ssh -R` / `-D`, `chisel`, `ngrok`, `netsh interface portproxy` | [Reverse shells and pivoting](../network-attacks/reverse-shells-pivoting.md) |
+| Shell inside a container, privileged pod created, `docker.sock` used from a container | [Container escape](../post-exploitation/container-escape.md) |
+| Browser writes `.zip` / `.iso` with a `blob:` origin right after an HTML attachment was opened | [HTML smuggling](../initial-access/html-smuggling.md) |
 
 ## Network
 
@@ -49,6 +59,8 @@ Find what you see in the alert or log, then open the page for the likely attack.
 | LLMNR / NBT-NS responses from a workstation | [LLMNR poisoning](../network-attacks/llmnr-nbtns-poisoning.md) |
 | Large outbound upload to cloud storage at night | [Data exfiltration](../post-exploitation/data-exfiltration.md) |
 | One host scanning port 445 across the subnet | [Worm](../malware/worms.md) |
+| Your Wi-Fi name broadcast by an unknown access point; deauthentication floods | [Evil twin](../network-attacks/evil-twin.md) |
+| Your domain's DNS records changed; unexpected TLS certificates for your domain; hosts file modified | [DNS hijacking](../network-attacks/dns-hijacking.md) |
 
 ## Web server logs
 
@@ -63,6 +75,9 @@ Find what you see in the alert or log, then open the page for the likely attack.
 | POST of `.php` / `.aspx` / `.jsp` to an upload folder, then GET with `?cmd=` | [Web shell](../web-attacks/file-upload-web-shell.md) |
 | Thousands of 404s from one IP | Directory brute forcing ([scanning](../network-attacks/reconnaissance-scanning.md)) |
 | Many POSTs to `/login` from one IP | [Brute force](../credential-attacks/brute-force.md) |
+| `<!DOCTYPE`, `<!ENTITY`, `SYSTEM "file://` in XML request bodies | [XXE](../web-attacks/xxe.md) |
+| `rO0AB`, `AAEAAAD/////`, PHP `O:8:"` in cookies or parameters | [Insecure deserialization](../web-attacks/insecure-deserialization.md) |
+| `?next=https://other-site`, `?url=//evil.example`, `?redirect=` to external domains | [Open redirect](../web-attacks/open-redirect.md) |
 
 ## Email
 
@@ -72,6 +87,16 @@ Find what you see in the alert or log, then open the page for the likely attack.
 | Link to a login page on a look-alike domain | [Phishing](../initial-access/phishing.md) / [Session token theft](../cloud-identity/session-token-theft.md) |
 | Attachment `.html`, `.iso`, `.zip` with `.lnk`, `.one`, macro Office file | [Phishing](../initial-access/phishing.md) |
 | SPF / DKIM / DMARC fail | Spoofed sender ([Phishing](../initial-access/phishing.md)) |
+| Email with almost no text and a single QR code image | [QR code phishing](../initial-access/qr-code-phishing.md) |
+| Sender domain one character off from yours or a vendor's, registered in the last few weeks | [Lookalike domains](../initial-access/lookalike-domains.md) |
+| Urgent phone or video call from an "executive" asking for a payment or access | [Deepfake fraud](../ai-attacks/deepfake-fraud.md) |
+
+## AI applications
+
+| What you see | Likely attack |
+|---|---|
+| "Ignore previous instructions", "you are now..." in prompts or in documents the AI read | [Prompt injection](../ai-attacks/prompt-injection.md) |
+| AI assistant / agent sending data to external addresses or calling tools the user didn't ask for | [Prompt injection](../ai-attacks/prompt-injection.md) |
 
 ---
 

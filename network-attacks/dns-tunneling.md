@@ -64,5 +64,5 @@ index=dns
 
 ---
 
-| [← LLMNR / NBT-NS poisoning](llmnr-nbtns-poisoning.md) | [Home](../README.md) | [C2 beaconing →](c2-beaconing.md) |
+| [← DNS hijacking and DNS spoofing](dns-hijacking.md) | [Home](../README.md) | [C2 beaconing →](c2-beaconing.md) |
 |:---|:---:|---:|

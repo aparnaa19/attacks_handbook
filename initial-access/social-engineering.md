@@ -58,5 +58,5 @@
 
 ---
 
-| [← Business email compromise](business-email-compromise.md) | [Home](../README.md) | [Drive-by compromise →](drive-by-compromise.md) |
+| [← Lookalike domains (typosquatting)](lookalike-domains.md) | [Home](../README.md) | [SIM swapping →](sim-swapping.md) |
 |:---|:---:|---:|
